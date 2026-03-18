@@ -1,0 +1,26 @@
+site_name: M6 Final Demo Docs
+nav:
+  - Home: index.md
+  - Testing: testing.md
+  - Deployment: deployment.md
+  - Optimization and Monitoring: optimization-and-monitoring.md
+
+theme:
+  name: material
+  palette:
+    primary: "indigo"
+    accent: "indigo"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  features:
+    - navigation.instant
+    - tabs
+extra_css:
+  - css/custom.css
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
