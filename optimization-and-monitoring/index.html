@@ -1,0 +1,935 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../deployment/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Optimization and Monitoring - M6 Final Demo Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#optimization-and-monitoring" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="M6 Final Demo Docs" class="md-header__button md-logo" aria-label="M6 Final Demo Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            M6 Final Demo Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Optimization and Monitoring
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="M6 Final Demo Docs" class="md-nav__button md-logo" aria-label="M6 Final Demo Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    M6 Final Demo Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimization and Monitoring
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Optimization and Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#toolset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimizations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argon2-password-hashing-beforeafter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Argon2 Password Hashing Before/After
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Argon2 Password Hashing Before/After">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profiling-report-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling report (before)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiling-report-after" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling report (after)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-silk-n1-query-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Django-Silk: N+1 Query Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Django-Silk: N+1 Query Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-list-api-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task List API Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-list-api-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User List API Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locust-load-testing-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locust Load Testing Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Locust Load Testing Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedded-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedded reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Embedded reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#100-user-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        100-user report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1000-user-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1000-user report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-relic-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Relic Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Techniques
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#toolset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimizations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#argon2-password-hashing-beforeafter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Argon2 Password Hashing Before/After
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Argon2 Password Hashing Before/After">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profiling-report-before" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling report (before)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profiling-report-after" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiling report (after)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django-silk-n1-query-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Django-Silk: N+1 Query Optimization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Django-Silk: N+1 Query Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-list-api-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task List API Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-list-api-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User List API Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locust-load-testing-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locust Load Testing Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Locust Load Testing Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#report-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedded-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Embedded reports
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Embedded reports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#100-user-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        100-user report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1000-user-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1000-user report
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-relic-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Relic Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Techniques
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="optimization-and-monitoring">Optimization and Monitoring<a class="headerlink" href="#optimization-and-monitoring" title="Permanent link">&para;</a></h1>
+<p>Performance and stability are key priorities for TaskVault. We use a suite of tools to profile, optimize, and monitor the application.</p>
+<h2 id="toolset">Toolset<a class="headerlink" href="#toolset" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Pyinstrument</strong>: A low-overhead Python profiler used to identify bottlenecks in the request lifecycle and slow code paths.</li>
+<li><strong>Locust</strong>: Used for high-concurrency load testing.</li>
+<li><strong>Django-Silk</strong>: An interactive query profiler to catch N+1 queries and SQL issues in development.</li>
+<li><strong>New Relic</strong>: Production APM for real-time metrics, error tracking, and performance monitoring across Django and EC2 infrastructure.</li>
+</ul>
+<h2 id="performance-optimizations">Performance Optimizations<a class="headerlink" href="#performance-optimizations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Query Optimization</strong>: Resolved N+1 query issues using <code>select_related</code> and <code>prefetch_related</code> across high-traffic APIs (Tasks, Users, and Subscription).</li>
+<li><strong>Password Hashing</strong>: Replaced Django default hasher with Argon2 (<code>argon2-cffi</code>) for stronger password hashing and reduced CPU overhead in auth flows.</li>
+<li><strong>Caching &amp; Response Time</strong>: Added Redis-backed caching for frequently accessed endpoints and reduced average API response latency.</li>
+</ul>
+<h2 id="argon2-password-hashing-beforeafter">Argon2 Password Hashing Before/After<a class="headerlink" href="#argon2-password-hashing-beforeafter" title="Permanent link">&para;</a></h2>
+<p>We profiled CPU time before and after switching to Argon2 using Pyinstrument. Compare the result pages below.</p>
+<ul>
+<li><a href="../pyinstrument/before_passhash.html">Before Optimization</a></li>
+<li><a href="../pyinstrument/after_passhash.html">After </a></li>
+</ul>
+<h3 id="profiling-report-before">Profiling report (before)<a class="headerlink" href="#profiling-report-before" title="Permanent link">&para;</a></h3>
+<iframe src="/pyinstrument/before_passhash.html" style="width:100%;height:650px;border:1px solid #ccc;"></iframe>
+
+<h3 id="profiling-report-after">Profiling report (after)<a class="headerlink" href="#profiling-report-after" title="Permanent link">&para;</a></h3>
+<iframe src="/pyinstrument/after_passhash.html" style="width:100%;height:650px;border:1px solid #ccc;"></iframe>
+
+<h2 id="django-silk-n1-query-optimization">Django-Silk: N+1 Query Optimization<a class="headerlink" href="#django-silk-n1-query-optimization" title="Permanent link">&para;</a></h2>
+<h3 id="task-list-api-optimization">Task List API Optimization<a class="headerlink" href="#task-list-api-optimization" title="Permanent link">&para;</a></h3>
+<p><strong>Objective:</strong> Resolve N+1 bottleneck in <code>GET /api/v1/tasks/</code>.</p>
+<p><strong>Problem:</strong> For each task, separate queries were executed to fetch related <code>owner</code>, <code>assignee</code>, and organization data.</p>
+<p><strong>Solution:</strong> Use deep <code>select_related</code> in the queryset:</p>
+<pre><code class="language-python">queryset = Task.objects.select_related(
+    &quot;owner&quot;,
+    &quot;assignee&quot;,
+    &quot;parent_task&quot;,
+    &quot;organization&quot;,
+    &quot;owner__organization&quot;,
+    &quot;assignee__organization&quot;,
+)
+</code></pre>
+<p><strong>Impact:</strong> Query count reduced from 20+ (linear) to 4-5 stable queries (constant overhead).</p>
+<ul>
+<li>
+<p>Task List API Sql Queries before optimization
+<img alt="Task before optimization" src="../django-silk/task_before.png" /></p>
+</li>
+<li>
+<p>Task List API Sql Queries after optimization
+<img alt="Task after optimization" src="../django-silk/task_after.png" /></p>
+</li>
+</ul>
+<h3 id="user-list-api-optimization">User List API Optimization<a class="headerlink" href="#user-list-api-optimization" title="Permanent link">&para;</a></h3>
+<p><strong>Objective:</strong> Eliminate N+1 on <code>GET /api/v1/users/</code>.</p>
+<p><strong>Problem:</strong> Each user row executed an extra query for organization details.</p>
+<p><strong>Solution:</strong> Use:</p>
+<pre><code class="language-python">qs = User.objects.select_related(&quot;organization&quot;).all()
+</code></pre>
+<p><strong>Impact:</strong> Query count became constant (1 query), reducing latency and DB load.</p>
+<ul>
+<li>
+<p>User List API Sql Queries before optimization
+<img alt="User before optimization" src="../django-silk/users_before.png" /></p>
+</li>
+<li>
+<p>User List API Sql Queries after optimization
+<img alt="User after optimization" src="../django-silk/users_after.png" /></p>
+</li>
+</ul>
+<h2 id="locust-load-testing-analysis">Locust Load Testing Analysis<a class="headerlink" href="#locust-load-testing-analysis" title="Permanent link">&para;</a></h2>
+<p>We analyzed two Locust reports:</p>
+<ol>
+<li><strong>hundred_user.html</strong>: 100 users, ramp up 10 users per second</li>
+<li><strong>more_than_hundred.html</strong>: 1000 users, ramp up 10 users per second</li>
+</ol>
+<h3 id="report-summary">Report Summary<a class="headerlink" href="#report-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>100 users (slow ramp)</strong>: Stable throughput with average response times typically within acceptable bounds; low failure rate; indicates system can handle baseline traffic.</li>
+<li><strong>1000 users (faster ramp)</strong>: High throughput but increased latency and potential timeouts under peak load; useful to identify bottlenecks in DB query handling and worker concurrency.</li>
+</ul>
+<h3 id="embedded-reports">Embedded reports<a class="headerlink" href="#embedded-reports" title="Permanent link">&para;</a></h3>
+<h4 id="100-user-report">100-user report<a class="headerlink" href="#100-user-report" title="Permanent link">&para;</a></h4>
+<iframe src="/locust/hundred_user.html" style="width:100%;height:700px;border:1px solid #ccc;"></iframe>
+
+<h4 id="1000-user-report">1000-user report<a class="headerlink" href="#1000-user-report" title="Permanent link">&para;</a></h4>
+<iframe src="/locust/more_than_hundred.html" style="width:100%;height:700px;border:1px solid #ccc;"></iframe>
+
+<h2 id="new-relic-monitoring">New Relic Monitoring<a class="headerlink" href="#new-relic-monitoring" title="Permanent link">&para;</a></h2>
+<p>We use New Relic for full-stack observability: APM, error tracking, transaction tracing, and real-time dashboards.</p>
+<ul>
+<li><strong>Dashboard</strong>: We monitor CPU, memory, throughput, and key transaction times.</li>
+<li><strong>Alerts</strong>: Real-time alerts on error rate spikes and slow endpoints.</li>
+<li><strong>APM Traces</strong>: Deep stack traces for slow requests and database query timing.</li>
+</ul>
+<p><img alt="New Relic Dashboard" src="../new_relic/new_relic.png" /></p>
+<h2 id="optimization-techniques">Optimization Techniques<a class="headerlink" href="#optimization-techniques" title="Permanent link">&para;</a></h2>
+<p>We implement several layers of optimization across the stack:</p>
+<ul>
+<li><strong>Database Indexing</strong>: Ensuring UUID paths and frequently queried fields are indexed.</li>
+<li><strong>Query Optimization</strong>: Using <code>select_related</code> and <code>prefetch_related</code> to solve N+1 structural problems.</li>
+<li><strong>Redis Cache</strong>: Performance boost for high-traffic catalog data by caching response.</li>
+<li><strong>Background Processing</strong>: Offloading heavy tasks (like email and payment reconciliation) to <strong>Celery</strong>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "tabs"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
